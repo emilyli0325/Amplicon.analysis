@@ -115,6 +115,20 @@ A.1 <-rawdata2[grep("N", rawdata2$CultureID),]
 B.1 <-rawdata2[grep("M", rawdata2$CultureID),]
 C.1 <-rawdata2[grep("S", rawdata2$CultureID),]
 
+## remove outliers based upon cook's distance and remove them. 
+## A.mat <- cbind(A.1[,c(6,7)],log(A.1$Percent.580Mut/A.1$Percent.580Wt))
+## colnames(A.mat)[3] <- "LN"
+## A.mat <- A.mat[is.finite(rowSums(A.mat)),]
+## A.mat <- A.mat[A.mat$Asexual.cycle > 0,]
+## plot(A.mat$Asexual.cycle, A.mat$LN, main = "N", sub="", xlab="48h asexual cycles",  ylab = "ln(genotype ratio)", cex.lab = 2, cex.axis = 1.8, cex.main = 2, pch=21, col= "black", cex=2)
+## mod <- lm(LN~Asexual.cycle, data = A.mat)
+## cooksd <- cooks.distance(mod)
+## Plot the Cook's Distance using the traditional 4/n criterion
+## sample_size <- nrow(A.mat)
+## plot(cooksd, pch="*", cex=2, main="Influential Obs by Cooks distance")  # plot cook's distance
+## abline(h = 4/sample_size, col="red")  # add cutoff line
+## text(x=1:length(cooksd)+1, y=cooksd, labels=ifelse(cooksd>4/sample_size, names(cooksd),""), col="red")  # add labels
+
 
 # Figure 2 selection coefficient
 
