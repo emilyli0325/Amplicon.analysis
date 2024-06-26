@@ -1,5 +1,5 @@
 # Amplicon.analysis
-This scripts were used for Klech13 amplicon analysis.
+These scripts were used for Klech13 amplicon analysis.
 
 
 # Reference
